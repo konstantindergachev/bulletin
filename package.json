@@ -2,5 +2,17 @@
   "name": "bulletin",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^5.5.8",
+    "moment": "^2.22.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-redux": "^5.1.1",
+    "react-redux-firebase": "^2.2.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-firestore": "^0.5.8",
+    "redux-thunk": "^2.3.0"
+  }
 }
