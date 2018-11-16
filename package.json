@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --port 3000",
+    "clean": "rimraf ./dist/*",
+    "build": "npm run clean && webpack --mode production"
+  },
   "dependencies": {
     "firebase": "^5.5.8",
     "moment": "^2.22.2",
