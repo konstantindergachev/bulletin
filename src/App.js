@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 import './App.scss';
 
 class App extends React.Component {
@@ -11,6 +12,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <Navbar />
+        <Footer />
       </div>
     );
   }
