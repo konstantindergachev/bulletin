@@ -1,0 +1,30 @@
+@import '../../scss/mixins';
+.navbar {
+    height: var(--nav-height);
+    border-radius: 2px;
+    background-color: var(--navbar-bcg-color);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-columns: minmax(50px, auto);
+    grid-template-areas: "logo s menu";
+    @include deskfirst(750) {
+        grid-template-areas: "logo s";
+    }
+}
+
+.menu {
+    grid-area: menu;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include deskfirst(750) {
+        display: none;
+    }
+    &__item {
+        margin-right: 10px;
+        @include deskfirst(750) {
+            margin-bottom: 10px;
+
+        }
+    }
+}
