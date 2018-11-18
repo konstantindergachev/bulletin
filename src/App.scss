@@ -1,0 +1,96 @@
+@import './scss/mixins';
+:root {
+    /*---------- 'sizes' ----------*/
+    --nav-height: 60px;
+    --footer-height: 60px;
+    /*---------- 'main' ----------*/
+    --navbar-bcg-color: #495e68;
+    --navbar-forg-color: #fefbd8;
+    --navbar-forg-color-hvr: #ffab40;
+    --btn-circle: #80ced6;
+    --btn-circle-hvr: #70b5bd;
+    --footer-bcg-color: #495e68;
+    --footer-forg-color: #fefbd8;
+    --dashboard-box: #80ced6;           //change this color for fone
+
+    /*---------- 'project' ----------*/
+    --project-bcg-color: #546e7a;
+    --project-bcg-color-hvr: #495e68;
+    --project-forg-color: #ffd8a6;
+
+    /*---------- 'notifications' ----------*/
+    --notification-bcg-color: #fefbd8;
+    --notification-forg-color: #ffd8a6;
+    --notification-item-bcg-color: #546e7a;
+
+    /*---------- 'form' ----------*/
+    --form-bcg-color: #ffffff;
+    --form-control-border-col: #c5d5c5;
+    --form-control-bcg-col: #00000000;
+    --form-control-col: rgba(0, 0, 0, 0.87);
+    --input-control-placeholder: #c5d5c5;
+    --input-control-placeholder: #c5d5c5;
+    --input-focus-border-bottom-col: #26a69a;
+    --input-focus-col: #26a69a;
+
+    --box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+    /*---------- 'buttons' ----------*/
+    --create-btn-bcg-color: #26a69a;
+    --create-btn-bcg-color-hvr: #229489;
+    --create-btn-forg-color: #ffffff;
+
+    /*---------- 'spinner' ----------*/
+    --spinner-color: #424242;
+    /*---------- 'error' ----------*/
+    --error-message: #ff0000;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: 16px;
+    font-weight: 400;
+    min-height: 100%;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Consolas', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    line-height: 1.7;
+    background-color: var(--dashboard-box);
+    min-height: 100%;
+}
+
+strong {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.app {
+    max-width: 940px;
+    margin: 0 auto;
+    @include deskfirst(960){
+      margin: 0 20px;
+    }
+}
+
+.error__message{
+  color: var(--error-message);
+  text-align: center;
+}
+

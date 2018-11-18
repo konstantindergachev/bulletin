@@ -1,0 +1,16 @@
+.logo__link {
+    display: flex;
+    align-items: center;
+}
+
+.svg__logo {
+    width: 24px;
+    height: 24px;
+    grid-area: logo;
+    margin-left: 10px;
+    fill: var(--navbar-forg-color);
+    transition: all .3s ease-in-out;
+    &:hover {
+        fill: var(--navbar-forg-color-hvr);
+    }
+}
