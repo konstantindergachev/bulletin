@@ -1,0 +1,32 @@
+.spinner__ring {
+    &-wrapper {
+        height: calc(100vh - (var(--footer-height) + var(--nav-height) + 20px + 20px));
+    }
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner__ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 5px solid var(--spinner-color);
+    border-color: var(--spinner-color) transparent var(--spinner-color) transparent;
+    animation: spinner__ring 1.2s linear infinite;
+}
+
+@keyframes spinner__ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
