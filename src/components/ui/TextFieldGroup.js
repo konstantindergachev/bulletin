@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './TextFieldGroup.scss';
+
 const TextFieldGroup = ({ type, name, placeholder, value, onChange }) => {
   return (
     <div className="form__group">
