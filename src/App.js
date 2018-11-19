@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter} from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import './App.scss';
@@ -10,10 +11,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="app">
-        <Navbar />
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <div className="app">
+          <Navbar />
+          <Footer />
+        </div>
+      </BrowserRouter>
     );
   }
 }
