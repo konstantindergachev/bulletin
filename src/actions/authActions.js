@@ -1,11 +1,7 @@
 import { TYPES } from './types';
 
 //Create a signUp action creator
-export const signUp = (
-  newUserData,
-  firebase,
-  firestore,
-) => async dispatch => {
+export const signUp = (newUserData, firebase, firestore) => async dispatch => {
   try {
     const { email, password } = newUserData;
     const response = await firebase
@@ -25,6 +21,25 @@ export const signUp = (
   } catch (err) {
     dispatch({
       type: TYPES.CREATE_SIGNUP_ERROR,
+      payload: err.message,
+    });
+  }
+};
+
+//Create a signIn action creator
+export const signIn = (credentials, firebase) => async dispatch => {
+  const { email, password } = credentials;
+  try {
+    const serverAnswer = await firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password);
+    dispatch({
+      type: TYPES.LOGIN_CURRENT_USER,
+      payload: serverAnswer,
+    });
+  } catch (err) {
+    dispatch({
+      type: TYPES.CREATE_LOGIN_ERROR,
       payload: err.message,
     });
   }
