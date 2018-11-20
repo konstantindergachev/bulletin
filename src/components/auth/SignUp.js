@@ -8,6 +8,7 @@ import { signUp } from '../../actions/authActions';
 import Spinner from '../ui/Spinner';
 import TextFieldGroup from '../ui/TextFieldGroup';
 
+import './Auth.scss';
 class SignUp extends Component {
   constructor(props) {
     super(props);

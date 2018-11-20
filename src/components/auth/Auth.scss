@@ -1,0 +1,19 @@
+.signin, .signup{
+  background-color: var(--form-bcg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 300px;
+  border-radius: 2px;
+  box-shadow: var(--box-shadow);
+  &__wrapper {
+      height: calc(100vh - (var(--nav-height) + var(--footer-height)));
+      display: flex;
+      align-items: center;
+  }
+  &__title {
+      font-size: 16px;
+      font-weight: 500;
+  }
+}
