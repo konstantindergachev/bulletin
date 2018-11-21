@@ -46,9 +46,10 @@ export const signIn = (credentials, firebase) => async dispatch => {
 };
 
 //Creater a signOut action creator
-export const signOut = firebase => async dispatch => {
+export const signOut = (firebase, history) => async dispatch => {
   try {
     firebase.auth().signOut();
+    history.push('/');
     dispatch({
       type: TYPES.LOGOUT_CURRENT_USER,
     });
