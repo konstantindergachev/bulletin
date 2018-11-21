@@ -1,15 +1,47 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+import { compose } from 'redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { connect } from 'react-redux';
+
 import ProjectList from '../projects/ProjectList';
+import { getProjects } from '../../actions/projectActions';
+import Spinner from '../ui/Spinner';
 
 class Dashboard extends Component {
+  componentDidMount() {
+    this.props.getProjects();
+  }
   render() {
-    return (
-      <section className="dashboard">
-        <h1 className="dashboard__title">Dashboard page</h1>
-        <ProjectList />
-      </section>
-    );
+    const { auth, projects} = this.props;
+    if (!auth.uid) {
+      return <Redirect to="/signin" />;
+    } else {
+      if (projects) {
+        return (
+          <section className="dashboard">
+            <h1 className="dashboard__title">Project List</h1>
+            <ProjectList projects={projects} />
+          </section>
+        );
+      } else {
+        return <Spinner />;
+      }
+    }
   }
 }
 
-export default Dashboard;
+const mapStateToProps = state => ({
+  projects: state.firestore.ordered.projects,
+  auth: state.firebase.auth,
+});
+
+export default compose(
+  firestoreConnect([
+    { collection: 'projects', orderBy: ['createdAt', 'desc'] },
+  ]),
+  connect(
+    mapStateToProps,
+    { getProjects },
+  ),
+)(Dashboard);
