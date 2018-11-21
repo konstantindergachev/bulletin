@@ -24,7 +24,25 @@
         margin-right: 10px;
         @include deskfirst(750) {
             margin-bottom: 10px;
-
         }
+    }
+    &__link {
+        color: var(--navbar-forg-color);
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        &:hover {
+            color: var(--navbar-forg-color-hvr);
+        }
+    }
+}
+
+.btn__circle {
+    background-color: var(--btn-circle);
+    padding: 5px;
+    border-radius: 50%;
+    border: none;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: var(--btn-circle-hvr);
     }
 }
