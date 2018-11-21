@@ -44,3 +44,18 @@ export const signIn = (credentials, firebase) => async dispatch => {
     });
   }
 };
+
+//Creater a signOut action creator
+export const signOut = firebase => async dispatch => {
+  try {
+    firebase.auth().signOut();
+    dispatch({
+      type: TYPES.LOGOUT_CURRENT_USER,
+    });
+  } catch (err) {
+    dispatch({
+      type: TYPES.CREATE_LOGOUT_ERROR,
+      payload: err.message,
+    });
+  }
+};
