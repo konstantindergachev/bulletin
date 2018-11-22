@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectSummary from './ProjectSummary';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 const ProjectList = ({ projects }) => {
   console.log(`projects: `, projects);
@@ -18,7 +19,7 @@ const ProjectList = ({ projects }) => {
               content={project.content}
               authorFirstName={project.authorFirstName}
               authorLastName={project.authorLastName}
-              // createdAt={project.createdAt}
+              createdAt= {moment(project.createdAt.toDate()).calendar()}
             />
           </Link>
         ))}
