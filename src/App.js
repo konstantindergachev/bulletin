@@ -5,6 +5,7 @@ import Footer from './components/layout/Footer';
 import SignUp from './components/auth/SignUp';
 import SignIn from './components/auth/SignIn';
 import Dashboard from './components/dashboard/Dashboard';
+import ProjectDetails from './components/projects/ProjectDetails';
 import './App.scss';
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
             <Route exact path="/" component={Dashboard} />
             <Route path="/signup" component={SignUp} />
             <Route path="/signin" component={SignIn} />
+            <Route path="/project/:id" component={ProjectDetails} />
           </Switch>
           <Footer />
         </div>
