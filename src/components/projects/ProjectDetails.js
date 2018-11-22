@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import moment from 'moment';
 
 import Spinner from '../ui/Spinner';
+import './ProjectDetails.scss';
 
 const ProjectDetails = ({ project }) => {
   const {

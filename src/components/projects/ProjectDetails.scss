@@ -1,0 +1,6 @@
+.one__project{
+  height: calc(100vh - (var(--nav-height) + var(--footer-height)));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
