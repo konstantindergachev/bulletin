@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import moment from 'moment';
 
 const ProjectList = ({ projects }) => {
-  console.log(`projects: `, projects);
   return (
     <React.Fragment>
       {projects &&

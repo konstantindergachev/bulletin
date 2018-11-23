@@ -8,8 +8,6 @@ import Logout from './LogOut';
 import './Navbar.scss';
 
 const Navbar = ({ authStatus, initials }) => {
-  console.log(`authStatus: `, authStatus);
-  console.log(`initials: `, initials);
   return (
       <nav className="navbar">
         <Link to="/" className="logo__link">
