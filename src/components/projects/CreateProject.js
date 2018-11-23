@@ -8,6 +8,8 @@ import { createProject } from '../../actions/projectActions';
 import TextFieldGroup from '../ui/TextFieldGroup';
 import TextAreaFieldGroup from '../ui/TextAreaFieldGroup';
 
+import './CreateProject.scss';
+
 class CreateProject extends Component {
   constructor(props) {
     super(props);
