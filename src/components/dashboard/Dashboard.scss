@@ -1,0 +1,11 @@
+@import '../../scss/mixins';
+.dashboard {
+    width: 100%;
+    margin: 10px 0;
+    height: auto;
+    background-color: var(--dashboard-box);
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "proj";
+}

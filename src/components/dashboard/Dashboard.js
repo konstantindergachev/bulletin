@@ -8,6 +8,7 @@ import ProjectList from '../projects/ProjectList';
 import { getProjects } from '../../actions/projectActions';
 import Spinner from '../ui/Spinner';
 
+import './Dashboard.scss';
 class Dashboard extends Component {
   componentDidMount() {
     this.props.getProjects();
