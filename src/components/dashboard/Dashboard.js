@@ -20,7 +20,6 @@ class Dashboard extends Component {
       if (projects) {
         return (
           <section className="dashboard">
-            <h1 className="dashboard__title">Project List</h1>
             <ProjectList projects={projects} />
           </section>
         );
