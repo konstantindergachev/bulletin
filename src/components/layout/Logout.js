@@ -9,7 +9,7 @@ const Logout = ({ signOut, firebase, history,  initials }) => {
   return (
     <ul className="menu">
       <li className="menu__item">
-        <Link to="/create" className="menu__item">
+        <Link to="/create" className="menu__link">
           New Project
         </Link>
       </li>
