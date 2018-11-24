@@ -3,6 +3,8 @@ import { TYPES } from '../actions/types';
 const initialState = {
   projects: [],
   loading: false,
+  project: {},
+  error: null,
 };
 
 export default function(state = initialState, action) {
