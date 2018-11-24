@@ -7,6 +7,7 @@ import SignIn from './components/auth/SignIn';
 import Dashboard from './components/dashboard/Dashboard';
 import ProjectDetails from './components/projects/ProjectDetails';
 import CreateProject from './components/projects/CreateProject';
+import NotFound from './components/not-found/NotFound';
 import './App.scss';
 
 class App extends React.Component {
@@ -25,6 +26,7 @@ class App extends React.Component {
             <Route path="/signin" component={SignIn} />
             <Route path="/project/:id" component={ProjectDetails} />
             <Route path="/create" component={CreateProject} />
+            <Route render={props => <NotFound {...props} />} />
           </Switch>
           <Footer />
         </div>
