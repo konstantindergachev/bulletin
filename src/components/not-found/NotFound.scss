@@ -1,0 +1,11 @@
+.page__not-found {
+    height: calc(100vh - (var(--footer-height) + var(--nav-height))); // text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.error__text {
+    color: #FF0000;
+}
