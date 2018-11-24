@@ -23,6 +23,12 @@ export default function(state = initialState, action) {
         user: action.payload,
         isAuthenticated: true,
       };
+    case TYPES.LOGOUT_CURRENT_USER:
+      return {
+        ...state,
+        user: {},
+        isAuthenticated: false,
+      };
     default:
       return state;
   }
