@@ -29,6 +29,11 @@ export default function(state = initialState, action) {
         user: {},
         isAuthenticated: false,
       };
+    case TYPES.CREATE_LOGIN_ERROR:
+      return {
+        ...state,
+        error: action.payload,
+      };
     default:
       return state;
   }
