@@ -15,8 +15,8 @@ export default function(state = initialState, action) {
     case TYPES.GET_PROJECTS:
       return {
         ...state,
-        // projects: action.payload,
-        projects: state.projects,
+        projects: action.payload,
+        //projects: state.projects,
         loading: false,
       };
     default:
