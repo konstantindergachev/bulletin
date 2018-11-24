@@ -19,6 +19,18 @@ export default function(state = initialState, action) {
         //projects: state.projects,
         loading: false,
       };
+    case TYPES.CREATE_PROJECT:
+      return {
+        ...state,
+        project: action.payload,
+        loading: false,
+      };
+    case TYPES.CREATE_PROJECT_ERROR:
+      return {
+        ...state,
+        error: action.payload,
+        loading: false,
+      };
     default:
       return state;
   }
