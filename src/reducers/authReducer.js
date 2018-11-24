@@ -17,6 +17,12 @@ export default function(state = initialState, action) {
         ...state,
         error: action.payload,
       };
+    case TYPES.LOGIN_CURRENT_USER:
+      return {
+        ...state,
+        user: action.payload,
+        isAuthenticated: true,
+      };
     default:
       return state;
   }
