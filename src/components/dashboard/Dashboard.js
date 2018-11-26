@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import ProjectList from '../projects/ProjectList';
 import { getProjects } from '../../actions/projectActions';
 import Spinner from '../ui/Spinner';
+import Notifications from './Notifications';
 
 import './Dashboard.scss';
 class Dashboard extends Component {
@@ -14,7 +15,7 @@ class Dashboard extends Component {
     this.props.getProjects();
   }
   render() {
-    const { auth, projects} = this.props;
+    const { auth, projects, notifications} = this.props;
     if (!auth.uid) {
       return <Redirect to="/signin" />;
     } else {
@@ -22,6 +23,7 @@ class Dashboard extends Component {
         return (
           <section className="dashboard">
             <ProjectList projects={projects} />
+            <Notifications notifications={notifications} />
           </section>
         );
       } else {
