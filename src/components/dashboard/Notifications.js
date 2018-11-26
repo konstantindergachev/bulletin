@@ -1,6 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 
+import './Notifications.scss';
+
 const Notifications = ({ notifications }) => {
   return (
     <div className="notifications">

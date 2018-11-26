@@ -1,0 +1,30 @@
+.notifications {
+    background-color: var(--notification-bcg-color);
+    color: var(--notification-forg-color);
+    grid-area: notif;
+    padding: 10px;
+    border-radius: 5px;
+    align-self: flex-start;
+    box-shadow: var(--box-shadow);
+    &__title {
+        font-size: 16px;
+        font-weight: 500;
+        display: block;
+        text-align: center;
+        color: #000000;
+    }
+    &__item {
+        background-color: var(--notification-item-bcg-color);
+        border-radius: 20px;
+        padding: 2px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    &__content {
+        font-size: 14px;
+    }
+    &__author,
+    &__time {
+        font-size: 14px;
+    }
+}
