@@ -15,7 +15,7 @@ class Dashboard extends Component {
     this.props.getProjects();
   }
   render() {
-    const { auth, projects, notifications} = this.props;
+    const { auth, projects, notifications } = this.props;
     if (!auth.uid) {
       return <Redirect to="/signin" />;
     } else {
@@ -36,11 +36,13 @@ class Dashboard extends Component {
 const mapStateToProps = state => ({
   projects: state.firestore.ordered.projects,
   auth: state.firebase.auth,
+  notifications: state.firestore.ordered.notifications,
 });
 
 export default compose(
   firestoreConnect([
     { collection: 'projects', orderBy: ['createdAt', 'desc'] },
+    { collection: 'notifications', limit: 21, orderBy: ['time', 'desc'] },
   ]),
   connect(
     mapStateToProps,
