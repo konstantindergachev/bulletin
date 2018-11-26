@@ -1,3 +1,7 @@
+.projects{
+  grid-area: proj;
+}
+
 .project{
   background-color: var(--project-bcg-color);
   color: var(--project-forg-color);
@@ -5,7 +9,7 @@
   border-radius: 2px;
   transition: all .3s ease-in-out;
   box-shadow: var(--box-shadow);
-  grid-area: proj;
+  margin-bottom: 5px;
   &:hover{
     background-color: var(--project-bcg-color-hvr);
   }

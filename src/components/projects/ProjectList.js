@@ -5,7 +5,7 @@ import moment from 'moment';
 
 const ProjectList = ({ projects }) => {
   return (
-    <React.Fragment>
+    <div className="projects">
       {projects &&
         projects.map(project => (
           <Link
@@ -22,7 +22,7 @@ const ProjectList = ({ projects }) => {
             />
           </Link>
         ))}
-    </React.Fragment>
+    </div>
   );
 };
 export default ProjectList;
