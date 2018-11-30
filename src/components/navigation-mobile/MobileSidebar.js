@@ -2,17 +2,23 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Login from '../layout/LogIn';
 import Logout from '../layout/Logout';
+import Backdrop from './Bac kdrop';
 
 import './MobileSidebar.scss';
 
 const Sidebar = ({ authStatus, initials, open, close }) => {
   return (
     <React.Fragment>
+      <Backdrop open={open} />
       <section
         className={`sidebar ${open ? 'sidebar__open' : ''}`}
         onClick={close}
       >
-        {!authStatus ? <Login open={open} /> : <Logout initials={initials} open={open} />}
+        {!authStatus ? (
+          <Login open={open} />
+        ) : (
+          <Logout initials={initials} open={open} />
+        )}
       </section>
     </React.Fragment>
   );
