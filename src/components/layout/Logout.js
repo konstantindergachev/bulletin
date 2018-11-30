@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 import { signOut } from '../../actions/authActions';
 import { firebaseConnect } from 'react-redux-firebase';
 
-const Logout = ({ signOut, firebase, history,  initials }) => {
+const Logout = ({ signOut, firebase, history,  initials, open }) => {
   return (
-    <ul className="menu">
+    <ul className={`menu ${open ? 'menu__open' : ''}`}>
       <li className="menu__item">
         <Link to="/create" className="menu__link">
           New Project

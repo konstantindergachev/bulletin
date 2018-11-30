@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Login from '../layout/LogIn';
 import Logout from '../layout/Logout';
-import Backdrop from './Bac kdrop';
+import Backdrop from './Backdrop';
 
 import './MobileSidebar.scss';
 
@@ -15,9 +15,9 @@ const Sidebar = ({ authStatus, initials, open, close }) => {
         onClick={close}
       >
         {!authStatus ? (
-          <Login open={open} />
-        ) : (
           <Logout initials={initials} open={open} />
+        ) : (
+          <Login open={open} />
         )}
       </section>
     </React.Fragment>
