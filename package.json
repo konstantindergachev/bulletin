@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --port 3000",
+    "dev": "webpack-dev-server --mode development --port 3001",
     "clean": "rimraf ./dist/*",
     "build": "npm run clean && webpack --mode production"
   },
