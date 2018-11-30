@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Login from '../layout/LogIn';
 import Logout from '../layout/Logout';
 
+import './MobileSidebar.scss';
+
 const Sidebar = ({ authStatus, initials, open, close }) => {
   return (
     <React.Fragment>
@@ -10,7 +12,7 @@ const Sidebar = ({ authStatus, initials, open, close }) => {
         className={`sidebar ${open ? 'sidebar__open' : ''}`}
         onClick={close}
       >
-        {!authStatus ? <Login /> : <Logout initials={initials} open={open} />}
+        {!authStatus ? <Login open={open} /> : <Logout initials={initials} open={open} />}
       </section>
     </React.Fragment>
   );

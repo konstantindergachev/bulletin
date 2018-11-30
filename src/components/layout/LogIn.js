@@ -2,9 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 
-const Login = () => {
+const Login = ({open}) => {
   return (
-    <ul className="menu">
+    <ul className={`menu ${open ? 'menu__open' : ''}`}>
       <li className="menu__item">
         <Link to="/signup" className="menu__link">Signup</Link>
       </li>

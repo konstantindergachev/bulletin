@@ -1,0 +1,21 @@
+@import '../../scss/mixins.scss';
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    z-index: 1001;
+    &__open {
+        @include deskfirst(750) {
+            background-color: var(--navbar-bcg-color);
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-end;
+            padding: var(--nav-height) 10px 0;
+            height: 100vh;
+            transition: all .3s ease-in;
+        }
+    }
+}
