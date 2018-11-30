@@ -3,11 +3,14 @@ import { connect } from 'react-redux';
 import Login from '../layout/LogIn';
 import Logout from '../layout/Logout';
 
-const Sidebar = ({ authStatus, initials }) => {
+const Sidebar = ({ authStatus, initials, open, close }) => {
   return (
     <React.Fragment>
-      <section className="sidebar">
-        {!authStatus ? <Login /> : <Logout initials={initials} />}
+      <section
+        className={`sidebar ${open ? 'sidebar__open' : ''}`}
+        onClick={close}
+      >
+        {!authStatus ? <Login /> : <Logout initials={initials} open={open} />}
       </section>
     </React.Fragment>
   );
