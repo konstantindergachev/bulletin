@@ -2,9 +2,12 @@ import React from 'react';
 
 import './Sandwich.scss';
 
-const Sandwich = () => {
+const Sandwich = ({ togglerClick, open }) => {
   return (
-    <div onClick="sandwich">
+    <div
+      onClick={togglerClick}
+      className={`sandwich ${open ? 'sandwich__active' : ''}`}
+    >
       <div />
       <div />
       <div />

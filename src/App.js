@@ -13,13 +13,21 @@ import './App.scss';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { open: false };
   }
+  handleTogglerClick = () => {
+    this.setState(prevState => ({ open: !prevState.open }));
+  };
+  handleCloseClick = () => {
+    this.setState({ open: false });
+  };
 
   render() {
+    const {open} = this.state;
     return (
       <BrowserRouter>
         <div className="app">
-          <Navbar />
+          <Navbar togglerClick={this.handleTogglerClick} open={open} />
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <Route path="/signup" component={SignUp} />
